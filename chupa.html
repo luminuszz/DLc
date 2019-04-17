@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+
+
+<body  style="background-image:url(hqdefault.jpg)">
+
+			<script>
+
+	function pisca(item){
+
+	var ob = document.getElementById(item);
+
+	if (ob.style.color=="white"){
+
+	ob.style.color="black";
+
+	}else{
+
+	ob.style.color="white";
+
+	}
+
+	}
+
+	function frases()
+	{
+		var frases = ['CHUPA A CABEÇA DA MINHA PICA','Pica mansa', 'CORNO MANSO', 'JUDAS CORNO', '20 MOEDAS DE PRATAS NO CU','CHEIRO DE VELHO','MALBEC DA FEIRA DO ROLO','SUPER JEFINHO','TESÂO','GOZEI'];
+
+		console.log(Math.floor(Math.random() * frases.length));
+
+		document.querySelector("#piscar").innerHTML = frases[Math.floor(Math.random() * frases.length)];
+	}
+
+ 
+</script>
+
+
+		<h2 style="color: red;" id="piscar"></h2>
+
+		<script>
+
+		t = setInterval("pisca('piscar')",500)
+
+		</script>
+		<label style="color: red">Clique abaixo para frases Motivadores</label>
+		<br>
+		<button id="clicaviado" onclick="frases();" style="margin-top: 50px;">Clica aqui</button>
+	</body>
+
+</html>
